@@ -1,0 +1,453 @@
+body {
+    background-image: url('../images/ricepaper_v3.png');
+    font-family: "motor", sans-serif;
+}
+
+.vr-text {
+    position: fixed;
+    left: 21px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-180deg);
+    writing-mode: vertical-rl;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 17px;
+    letter-spacing: 0.8px;
+    color: #000;    
+}
+
+.reservations-tab {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(-180deg);
+    writing-mode: vertical-rl;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.9px;
+    color: #fff;
+    background: #000;
+    text-transform: uppercase;
+    padding: 20px 0;
+    z-index: 10;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    transition: all .2s ease-in-out;
+}
+
+.reservations-tab:hover {
+    width: 60px;
+}
+
+.logo {
+    margin-top: 37px;
+}
+
+.menu {
+    max-width: 485px;
+    margin: 52px auto 100px auto;
+}
+
+.menu .menu-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+}
+
+.menu .menu-list .menu-item {
+    list-style: none;
+}
+
+.menu .menu-list .menu-item .menu-link {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none !important;
+}
+
+.menu-link.active:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    transform: translateY(-50%);
+    background: #000;
+}
+
+.content h1 {
+    font-size: 36px;
+    line-height: 41px;
+    color: #000;
+    margin-bottom: 100px;
+}
+
+.content p {
+    font-size: 17px;	
+    line-height: 24px;
+    color: #000;
+}
+
+footer {
+    margin: 312px 0 211px 0;
+}
+
+footer .contact-box {
+    max-width: 578px;
+    position: relative;
+    left: 41%;
+    transform: translateX(-41%);
+    border: 1px solid #979797;
+}
+
+footer .contact-box .col-3 {
+    border-right: 1px solid #979797;
+    align-items: center;
+    padding: 30px 0;
+}
+
+footer .contact-box .col-9, footer .contact-box .col-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer .contact-box .col-9 {
+    padding: 30px 40px;
+}
+
+footer .contact-box span, footer .contact-box a {
+    color: #000;
+    font-size: 22px;
+    line-height: 26px;
+    text-decoration: none;
+}
+
+footer .contact-box a:hover {
+    text-decoration: underline;
+    color: #F46760;
+}
+
+footer .newsletter {
+    margin: 60px auto 40px auto;
+    max-width: 300px;
+}
+
+footer .newsletter h6 {
+    font-size: 22px;
+    line-height: 26px;
+    color: #000;
+}
+
+footer form {
+    position: relative;
+}
+
+footer .newsletter input {
+    background: transparent !important;
+    border: none;
+    border-bottom: 1px solid #979797 !important;
+    border-radius: 0px;
+    padding: 11px 0;
+    color: #000 !important;
+    font-size: 16px;
+}
+
+footer .newsletter input::-webkit-input-placeholder {
+    color: #000;
+}
+
+footer #submit-btn {
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+footer #submit-btn i {
+    font-size: 16px;
+}
+
+footer .newsletter input:focus, footer #submit-btn:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+footer .social-media {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+footer .social-media a {
+    display: block;
+    font-size: 22px;
+    line-height: 26px;
+    color: #000 !important;
+    text-decoration: none !important;
+    max-width: 100px;
+}
+
+footer .copyright {
+    max-width: 300px;
+    margin: 7px auto;
+}
+
+footer .copyright span {
+    font-size: 22px;
+    color: #8E8E93;
+    line-height: 26px;
+}
+
+footer .copyright a {
+    color: #8E8E93 !important;
+    text-decoration: none !important;
+}
+
+@media (min-width: 1265px) {
+    body:before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 63px;
+        width: 1px;
+        height: 100%;
+        background: #979797;
+    }
+}
+
+@media (max-width: 1265px) {
+    .vr-text {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    footer .contact-box p {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+@keyframes line-through {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.menu-link, .social-media a, .copyright a {
+    position: relative;
+}
+
+.menu-link:after, .social-media a:after, .copyright a:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 2px;
+    transform: translateY(-50%);
+    background: #000;
+}
+
+.menu-link:hover:after, .social-media a:hover:after, .copyright a:hover:after {
+    animation: line-through .4s ease-in-out forwards;
+}
+
+#oval-1 {
+    width: 21vw;
+    height: 21vw;
+    background: #F46760;
+    opacity: 0.05;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -35%;
+    right: 20%;
+    z-index: -1;
+}
+
+
+/* Fullscreen modal */
+@media (max-width: 767px) {
+    .modal-fullscreen-xs-down {
+        padding: 0 !important;
+    }
+    .modal-fullscreen-xs-down .modal-dialog {
+        width: 100%;
+        min-width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .modal-fullscreen-xs-down .modal-content {
+        height: auto;
+        min-height: 100%;
+        border: 0 none;
+        border-radius: 0;
+    }
+    .navbar-nav .nav-item .nav-link {
+        font-size: 42px;
+        line-height: 50px;
+    }
+}
+@media (max-width: 991px) {
+    .modal-fullscreen-sm-down {
+        padding: 0 !important;
+    }
+    .modal-fullscreen-sm-down .modal-dialog {
+        width: 100%;
+        min-width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .modal-fullscreen-sm-down .modal-content {
+        height: auto;
+        min-height: 100%;
+        border: 0 none;
+        border-radius: 0;
+    }
+}
+@media (max-width: 1199px) {
+    .modal-fullscreen-md-down {
+        padding: 0 !important;
+    }
+    .modal-fullscreen-md-down .modal-dialog {
+        width: 100%;
+        min-width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .modal-fullscreen-md-down .modal-content {
+        height: auto;
+        min-height: 100%;
+        border: 0 none;
+        border-radius: 0;
+    }
+}
+.modal-fullscreen {
+    padding: 0 !important;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+.modal-fullscreen .modal-dialog {
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.modal-fullscreen .modal-content {
+    background-image: url('../images/ricepaper_v3.png');
+    height: auto;
+    min-height: 100%;
+    border: 0 none;
+    border-radius: 0;
+    padding-top: 38px;
+    transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
+}
+
+.modal-fullscreen .modal-body {
+    padding-top: 89px;
+}
+
+.modal-fullscreen .modal-body h2 {
+    text-align: center;
+    color: #000000;	
+    font-size: 36px;	
+    line-height: 41px;
+    text-transform: uppercase;
+}
+
+.modal-fullscreen form {
+    max-width: 522px;
+    margin: 60px auto;
+}
+
+.modal-fullscreen form label {
+    color: #000000;	
+    font-size: 14px;	
+    letter-spacing: 2.55px;	
+    line-height: 17px;
+    text-transform: uppercase;
+}
+
+.modal-fullscreen form input {
+    border-radius: 0px;
+    border: 1px solid rgba(151,151,151,0.34);
+    width: 100%;
+    background: #fff;
+    padding: 23px 21px;
+    height: 70px;
+    font-size: 14px;	
+    line-height: 24px;
+    color: #000 !important;
+    text-transform: uppercase;
+    letter-spacing: 2.55px;	
+}
+
+.modal-fullscreen form input:focus {
+    box-shadow: none;
+    outline: none;
+    border: 1px solid #000;
+}
+
+.modal-fullscreen form .btn-submit {
+    background: #000;
+    border-radius: 0px;
+    width: 100%;
+    margin-top: 18px;
+    color: #fff;
+    font-size: 18px;	
+    letter-spacing: 0.9px;	
+    line-height: 20px;
+    text-transform: uppercase;
+    padding: 20px 0;
+    border: 1px solid #000;
+}
+
+.modal-fullscreen form .btn-submit:hover {
+    background: transparent;
+    color: #000;
+}
+
+.close {
+    position: absolute;
+    right: 87px;
+    top: 37px;
+    font-size: 84px;
+    z-index: 1;
+    opacity: 1 !important;
+}
+
+@media (max-width: 576px) {
+    .close {
+        right: 37px;
+    }
+}
+
+.close:focus {
+    outline: none;
+}
+.alert-reservation,
+.alert-reservation-error {
+    max-width: 522px;
+    text-align: center;
+    margin: 40px auto;
+    display: none;
+}
+
+.intl-tel-input {
+    display: block !important;
+}
